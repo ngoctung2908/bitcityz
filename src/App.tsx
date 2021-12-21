@@ -34,7 +34,7 @@ import useSentryUser from './hooks/useSentryUser'
 
 // Route-based code splitting
 // Only pool is included in the main bundle because of it's the most visited page
-import { Header } from './bitcityz/components'
+import { Footer, Header } from './bitcityz/components'
 
 const Home = lazy(() => import('./bitcityz/scenes/home/home'))
 // const Farms = lazy(() => import('./views/Farms'))
@@ -182,6 +182,7 @@ const App: React.FC = () => {
           <Route component={NotFound} />
         </Switch>
       </SuspenseWithChunkError>
+      <Footer />
       <EasterEgg iterations={2} />
       <ToastListener />
       <DatePickerPortal />
